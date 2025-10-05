@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "../css/formulario.css"; // Estilos personalizados del formulario de registro
+import React, { useState } from "react"; // Importa React y el hook useState para manejar estado local
+import { useNavigate } from "react-router-dom"; // Hook para navegación entre rutas
+import '../css/formulario.css'; // Estilos personalizados para el formulario
 
 function RegistrarPage() {
-  const navigate = useNavigate(); // Hook para navegar entre rutas
+  const navigate = useNavigate(); // Permite redirigir a otras páginas del sitio
 
-  // Estado local que almacena los valores del formulario
+  // Estado del formulario con los campos del usuario
   const [formData, setFormData] = useState({
     nombre: "",
     correo: "",
@@ -13,41 +13,41 @@ function RegistrarPage() {
     confirmarContrasena: "",
   });
 
-  // Maneja los cambios en los campos de entrada
+  // Maneja los cambios de cada campo del formulario
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value }); // Actualiza el estado con los valores nuevos
+    const { name, value } = e.target; // Extrae el nombre y valor del campo modificado
+    setFormData({ ...formData, [name]: value }); // Actualiza el estado manteniendo los demás valores
   };
 
   // Maneja el envío del formulario
   const handleSubmit = (e) => {
-    e.preventDefault(); // Evita el comportamiento por defecto (recargar la página)
+    e.preventDefault(); // Evita que la página se recargue al enviar el formulario
 
-    // Validación simple de contraseñas
+    // Verifica que las contraseñas coincidan antes de continuar
     if (formData.contrasena !== formData.confirmarContrasena) {
       alert("Las contraseñas no coinciden ❌");
       return;
     }
 
-    // Simula registro correcto (por ahora sin backend)
+    // Muestra los datos en consola (simulación de registro)
     console.log("Datos registrados:", formData);
     alert("Registro exitoso ✅");
 
-    // Redirige al usuario a la página principal o de inicio de sesión
-    navigate("/InicioPage");
+    // Redirige al usuario a la página de inicio
+    navigate("/inicio");
   };
 
   return (
-    // Sección principal del formulario de registro
+    // Sección principal que contiene el formulario
     <section
       id="registro"
       className="registro-section"
       style={{ padding: "40px", textAlign: "center" }}
     >
-      {/* Formulario con estilos embebidos */}
+      {/* Formulario de registro */}
       <form
         id="registroForm"
-        onSubmit={handleSubmit} // Asocia el envío al manejador
+        onSubmit={handleSubmit}
         style={{
           maxWidth: "400px",
           margin: "0 auto",
@@ -59,7 +59,7 @@ function RegistrarPage() {
       >
         <h2>Registro de Usuario</h2>
 
-        {/* Campo: nombre completo */}
+        {/* Campo de nombre completo */}
         <div
           className="campo"
           style={{ marginBottom: "15px", textAlign: "left" }}
@@ -76,7 +76,7 @@ function RegistrarPage() {
           />
         </div>
 
-        {/* Campo: correo electrónico */}
+        {/* Campo de correo electrónico */}
         <div
           className="campo"
           style={{ marginBottom: "15px", textAlign: "left" }}
@@ -93,7 +93,7 @@ function RegistrarPage() {
           />
         </div>
 
-        {/* Campo: contraseña */}
+        {/* Campo de contraseña */}
         <div
           className="campo"
           style={{ marginBottom: "15px", textAlign: "left" }}
@@ -110,7 +110,7 @@ function RegistrarPage() {
           />
         </div>
 
-        {/* Campo: confirmar contraseña */}
+        {/* Campo de confirmación de contraseña */}
         <div
           className="campo"
           style={{ marginBottom: "15px", textAlign: "left" }}
@@ -127,12 +127,14 @@ function RegistrarPage() {
           />
         </div>
 
-        {/* Botón principal para registrar usuario */}
+        {/* Botón para registrar usuario */}
         <button
           id="registrar"
           type="submit"
           className="btn btn-success w-100"
           style={{ marginTop: "10px" }}
+          Ingresar
+          onClick={() => navigate("/ExplorarPage")} // Redirige a la página de exploración
         >
           Registrar
         </button>
@@ -141,4 +143,4 @@ function RegistrarPage() {
   );
 }
 
-export default RegistrarPage;
+export default RegistrarPage; // Exporta el componente para su uso en la aplicación
