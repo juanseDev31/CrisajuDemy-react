@@ -1,42 +1,50 @@
-/* CARDS */
+/* ============================
+   ESTILOS PARA LAS TARJETAS (CARDS)
+   ============================ */
 
+/* Contenedor principal de cada tarjeta */
 .custom-card {
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    overflow: hidden;
+    border-radius: 10px; /* Bordes redondeados suaves */
+    border: 1px solid #ddd; /* Borde gris claro para definición */
+    overflow: hidden; /* Evita que los elementos sobresalgan del borde */
 }
 
+/* Encabezado de la tarjeta */
 .custom-card .card-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #fff;
-    border-bottom: 1px solid #ddd;
-    padding: 0.5rem 0.75rem;
+    display: flex; /* Coloca los elementos en una misma línea */
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: space-between; /* Separa los íconos y el texto */
+    background: #fff; /* Fondo blanco para un look limpio */
+    border-bottom: 1px solid #ddd; /* Línea divisoria con el cuerpo de la tarjeta */
+    padding: 0.5rem 0.75rem; /* Espaciado interno */
 }
 
+/* Texto central del encabezado ("Agregar a mis cursos") */
 .header-text {
-    font-size: 0.9rem;
-    font-weight: bold;
-    flex-grow: 1;
+    font-size: 0.9rem; /* Tamaño moderado del texto */
+    font-weight: bold; /* Resalta el texto */
+    flex-grow: 1; /* Permite que el texto ocupe el espacio entre los botones */
 }
 
+/* Botones de ícono (Agregar, Cerrar, etc.) */
 .btn-icon {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #333;
-    font-size: 1rem;
-    transition: 0.2s;
+    background: none; /* Elimina fondo por defecto */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor tipo mano al pasar por encima */
+    color: #333; /* Color base del ícono */
+    font-size: 1rem; /* Tamaño del ícono */
+    transition: 0.2s; /* Transición suave para hover */
 }
 
+/* Efecto hover sobre los íconos */
 .btn-icon:hover {
-    color: #007bff;
-    transform: scale(1.1);
+    color: #007bff; /* Cambia a azul al pasar el cursor */
+    transform: scale(1.1); /* Ligero aumento de tamaño para indicar interactividad */
 }
 
+/* Pie de la tarjeta */
 .custom-card .card-footer {
-    background: #fff;
-    border-top: 1px solid #ddd;
-    font-size: 0.85rem;
+    background: #fff; /* Fondo blanco consistente con el diseño general */
+    border-top: 1px solid #ddd; /* Línea divisoria con el contenido de la tarjeta */
+    font-size: 0.85rem; /* Tamaño ligeramente reducido del texto */
 }
