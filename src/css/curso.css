@@ -1,47 +1,54 @@
+/* Contenedor principal del curso */
 .curso-container {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px; /* Define un ancho máximo para mantener el contenido centrado */
+    margin: 20px auto; /* Centra el contenedor horizontalmente y da margen vertical */
+    padding: 20px; /* Espaciado interno para separar el contenido de los bordes */
+    background: white; /* Fondo blanco para destacar el contenido */
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Sombra suave para dar efecto de elevación */
 }
 
+/* Sección del encabezado del curso */
 .curso-header {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: flex; /* Distribuye los elementos (información y video) en línea */
+    justify-content: space-between; /* Deja espacio entre los elementos */
+    flex-wrap: wrap; /* Permite que los elementos bajen de línea en pantallas pequeñas */
+    gap: 20px; /* Espacio entre los elementos */
 }
 
+/* Estilo para el video del curso */
 .curso-video video {
-    max-width: 400px;
-    border-radius: 8px;
+    max-width: 400px; /* Limita el tamaño máximo del video */
+    border-radius: 8px; /* Bordes redondeados para mantener consistencia con el diseño */
 }
 
+/* Distribución en cuadrícula de los componentes de formación */
 .componentes-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    display: grid; /* Usa grid layout para organizar las secciones */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Se adapta automáticamente según el ancho disponible */
+    gap: 20px; /* Espacio entre las celdas del grid */
 }
 
+/* Sección de la oferta del curso */
 .oferta {
-    text-align: center;
-    margin-top: 30px;
+    text-align: center; /* Centra el contenido (imagen y botón) */
+    margin-top: 30px; /* Espacio superior para separarlo del contenido anterior */
 }
 
+/* Imagen dentro de la oferta */
 .oferta img {
-    max-width: 400px;
+    max-width: 400px; /* Tamaño máximo de la imagen para mantener proporción y evitar desbordes */
 }
 
+/* Botón de inscripción */
 .oferta button {
-    display: inline-block;
-    margin-top: 15px;
-    background: #2371C3;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 18px;
+    display: inline-block; /* Permite aplicar márgenes y padding correctamente */
+    margin-top: 15px; /* Espacio entre la imagen y el botón */
+    background: #2371C3; /* Color azul principal del botón */
+    color: white; /* Texto en blanco para contraste */
+    border: none; /* Elimina el borde por defecto */
+    padding: 12px 20px; /* Espaciado interno del botón */
+    border-radius: 6px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a “mano” al pasar por encima */
+    font-size: 18px; /* Tamaño del texto del botón */
 }
