@@ -1,11 +1,13 @@
-<!doctype html>
-<html lang="es">
+<!doctype html> <!-- Declara el tipo de documento: HTML5 -->
+<html lang="es"> <!-- Idioma del documento en español -->
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CrisajuDemy</title>
+  <meta charset="UTF-8" /> <!-- Codificación de caracteres en UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Escala y tamaño correctos en móviles -->
+  <title>CrisajuDemy</title> <!-- Título que aparece en la pestaña del navegador -->
 
-  <!-- Bootstrap 5.3.8 por CDN (una sola vez) -->
+  <!-- Carga de Bootstrap 5.3.8 desde CDN (solo una vez).
+       Incluye estilos base, grid y utilidades. El atributo integrity
+       ayuda a verificar el archivo y crossorigin permite su validación. -->
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -14,10 +16,16 @@
   />
 </head>
 <body>
+  <!-- Punto de montaje de la app React. React reemplaza este div en tiempo de ejecución -->
   <div id="root"></div>
 
+  <!-- Bundle de JS de Bootstrap (incluye Popper). Cargado al final para no bloquear el render -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-  <!-- Usa ruta relativa para evitar absolutas en Pages -->
+
+  <!-- Entrada del proyecto Vite + React.
+       Usamos ruta RELATIVA para que funcione en GitHub Pages
+       bajo la subruta /CrisajuDemy-react/. Vite se encargará
+       de resolver y reemplazar esta referencia en el build. -->
   <script type="module" src="./src/main.jsx"></script>
 </body>
 </html>
