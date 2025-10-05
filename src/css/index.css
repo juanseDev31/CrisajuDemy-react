@@ -1,44 +1,55 @@
-/* BODY */
+/* ============================
+   ESTILOS GENERALES DEL CUERPO
+   ============================ */
 
+/* Contenedor del texto de bienvenida en la página principal */
 .texto-inicio {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 0 2rem;
+    max-width: 800px; /* Limita el ancho máximo del bloque para mantener una lectura cómoda */
+    margin: 0 auto; /* Centra el texto horizontalmente */
+    text-align: center; /* Alinea todo el contenido al centro */
+    padding: 0 2rem; /* Agrega espaciado horizontal para que el texto no quede pegado a los bordes */
 }
 
+/* ============================
+   CARRUSEL DE IMÁGENES (HOME)
+   ============================ */
 
-/* CARRUSEL */
-
+/* Contenedor principal del carrusel */
 #tranding .tranding-slider {
-    height: 45rem;
-    padding: 1rem 0;
+    height: 45rem; /* Altura total del slider (ajústala según el tamaño deseado de las imágenes) */
+    padding: 1rem 0; /* Espaciado vertical para separar el carrusel de otros elementos */
 }
 
+/* Cada diapositiva del carrusel */
 .tranding-slide {
-    width: 28rem;
-    height: 35rem;
+    width: 28rem; /* Ancho de cada slide (controla cuántas se ven en pantalla) */
+    height: 35rem; /* Altura fija para mantener proporción en el carrusel */
 }
 
+/* Imágenes dentro de las diapositivas */
 .tranding-slide .tranding-slide-img img {
-    width: 100%;
-    height: 100%;
-    border-radius: 1.5rem;
-    object-fit: cover;
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: 100%; /* Ocupa toda la altura del slide */
+    border-radius: 1.5rem; /* Bordes redondeados para un look más suave y moderno */
+    object-fit: cover; /* Ajusta la imagen para llenar el espacio sin deformarse */
 }
 
+/* Adaptabilidad del carrusel en pantallas pequeñas */
 @media (max-width: 768px) {
     .tranding-slide {
-        width: 22rem;
+        width: 22rem; /* Reduce el tamaño del slide para pantallas tipo tablet o móvil */
         height: 28rem;
     }
 }
 
-/* BOTONES */
+/* ============================
+   BOTONES DE ACCIÓN (HOME)
+   ============================ */
 
+/* Contenedor de los botones de inicio y registro */
 .botones-container {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
+    display: flex; /* Coloca los botones uno al lado del otro */
+    justify-content: center; /* Centra el grupo de botones horizontalmente */
+    gap: 1rem; /* Espacio uniforme entre los botones */
+    margin-top: 1rem; /* Espacio superior respecto al texto anterior */
 }
