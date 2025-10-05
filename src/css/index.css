@@ -1,0 +1,44 @@
+/* BODY */
+
+.texto-inicio {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+
+/* CARRUSEL */
+
+#tranding .tranding-slider {
+    height: 45rem;
+    padding: 1rem 0;
+}
+
+.tranding-slide {
+    width: 28rem;
+    height: 35rem;
+}
+
+.tranding-slide .tranding-slide-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.5rem;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .tranding-slide {
+        width: 22rem;
+        height: 28rem;
+    }
+}
+
+/* BOTONES */
+
+.botones-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}

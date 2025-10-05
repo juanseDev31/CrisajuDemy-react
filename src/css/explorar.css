@@ -1,0 +1,42 @@
+/* CARDS */
+
+.custom-card {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.custom-card .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 0.5rem 0.75rem;
+}
+
+.header-text {
+    font-size: 0.9rem;
+    font-weight: bold;
+    flex-grow: 1;
+}
+
+.btn-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    font-size: 1rem;
+    transition: 0.2s;
+}
+
+.btn-icon:hover {
+    color: #007bff;
+    transform: scale(1.1);
+}
+
+.custom-card .card-footer {
+    background: #fff;
+    border-top: 1px solid #ddd;
+    font-size: 0.85rem;
+}
