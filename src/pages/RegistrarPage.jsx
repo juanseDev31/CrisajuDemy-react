@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import '../css/formulario.css'
-
+import "../css/formulario.css"; // Estilos personalizados del formulario de registro
 
 function RegistrarPage() {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Hook para navegar entre rutas
 
+  // Estado local que almacena los valores del formulario
   const [formData, setFormData] = useState({
     nombre: "",
     correo: "",
@@ -13,31 +13,41 @@ function RegistrarPage() {
     confirmarContrasena: "",
   });
 
+  // Maneja los cambios en los campos de entrada
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData({ ...formData, [name]: value }); // Actualiza el estado con los valores nuevos
   };
 
+  // Maneja el envío del formulario
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Evita el comportamiento por defecto (recargar la página)
 
+    // Validación simple de contraseñas
     if (formData.contrasena !== formData.confirmarContrasena) {
       alert("Las contraseñas no coinciden ❌");
       return;
     }
 
+    // Simula registro correcto (por ahora sin backend)
     console.log("Datos registrados:", formData);
     alert("Registro exitoso ✅");
 
-    // 🔹 Redirigir a la página de inicio
-    navigate("/inicio");
+    // Redirige al usuario a la página principal o de inicio de sesión
+    navigate("/InicioPage");
   };
 
   return (
-    <section id="registro" className="registro-section" style={{ padding: "40px", textAlign: "center" }}>
+    // Sección principal del formulario de registro
+    <section
+      id="registro"
+      className="registro-section"
+      style={{ padding: "40px", textAlign: "center" }}
+    >
+      {/* Formulario con estilos embebidos */}
       <form
         id="registroForm"
-        onSubmit={handleSubmit}
+        onSubmit={handleSubmit} // Asocia el envío al manejador
         style={{
           maxWidth: "400px",
           margin: "0 auto",
@@ -49,7 +59,11 @@ function RegistrarPage() {
       >
         <h2>Registro de Usuario</h2>
 
-        <div className="campo" style={{ marginBottom: "15px", textAlign: "left" }}>
+        {/* Campo: nombre completo */}
+        <div
+          className="campo"
+          style={{ marginBottom: "15px", textAlign: "left" }}
+        >
           <label htmlFor="nombre">Nombre completo:</label>
           <input
             type="text"
@@ -62,7 +76,11 @@ function RegistrarPage() {
           />
         </div>
 
-        <div className="campo" style={{ marginBottom: "15px", textAlign: "left" }}>
+        {/* Campo: correo electrónico */}
+        <div
+          className="campo"
+          style={{ marginBottom: "15px", textAlign: "left" }}
+        >
           <label htmlFor="correo">Correo electrónico:</label>
           <input
             type="email"
@@ -75,7 +93,11 @@ function RegistrarPage() {
           />
         </div>
 
-        <div className="campo" style={{ marginBottom: "15px", textAlign: "left" }}>
+        {/* Campo: contraseña */}
+        <div
+          className="campo"
+          style={{ marginBottom: "15px", textAlign: "left" }}
+        >
           <label htmlFor="contrasena">Contraseña:</label>
           <input
             type="password"
@@ -88,7 +110,11 @@ function RegistrarPage() {
           />
         </div>
 
-        <div className="campo" style={{ marginBottom: "15px", textAlign: "left" }}>
+        {/* Campo: confirmar contraseña */}
+        <div
+          className="campo"
+          style={{ marginBottom: "15px", textAlign: "left" }}
+        >
           <label htmlFor="confirmarContrasena">Confirmar contraseña:</label>
           <input
             type="password"
@@ -101,13 +127,12 @@ function RegistrarPage() {
           />
         </div>
 
+        {/* Botón principal para registrar usuario */}
         <button
           id="registrar"
           type="submit"
           className="btn btn-success w-100"
           style={{ marginTop: "10px" }}
-          Ingresar
-          onClick={() => navigate("/ExplorarPage")}
         >
           Registrar
         </button>
