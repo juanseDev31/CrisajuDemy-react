@@ -1,10 +1,10 @@
 import React from "react";
 
-
 function AdminPage() {
   return (
+    // Contenedor principal con Bootstrap; d-flex para layout horizontal
     <div className="container d-flex" style={{ padding: "20px" }}>
-      {/* Panel lateral izquierdo */}
+      {/* Panel lateral izquierdo (sidebar) */}
       <div
         className="sidebar"
         style={{
@@ -13,10 +13,12 @@ function AdminPage() {
           padding: "20px",
           borderRadius: "12px",
           boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
-          height: "fit-content",
+          height: "fit-content", // Ajusta la altura al contenido
         }}
       >
         <h3>General</h3>
+
+        {/* Lista de secciones de administración (no interactiva aún) */}
         <ul style={{ listStyle: "none", padding: 0 }}>
           <li>Front page settings</li>
           <li>My profile settings</li>
@@ -38,20 +40,23 @@ function AdminPage() {
           <li>Reports</li>
           <li>Development</li>
         </ul>
+
+        {/* Buscador simple en la sidebar */}
         <div className="search-box mt-3">
           <input
             type="text"
             placeholder="Buscar..."
             className="form-control"
+            // TODO: onChange para filtrar opciones en la lista
           />
         </div>
       </div>
 
-      {/* Panel central */}
+      {/* Panel central: administración de cursos */}
       <div
         className="course-panel mx-4"
         style={{
-          flex: 1,
+          flex: 1, // Ocupa el espacio disponible
           backgroundColor: "#fff",
           padding: "20px",
           borderRadius: "12px",
@@ -59,6 +64,8 @@ function AdminPage() {
         }}
       >
         <h3>📚 Course Administration</h3>
+
+        {/* Lista de acciones de curso (placeholder, no enlazadas aún) */}
         <ul style={{ listStyle: "none", padding: 0 }}>
           <li>🔧 Turn editing on</li>
           <li>✏️ Edit settings</li>
@@ -74,16 +81,19 @@ function AdminPage() {
           <li>❌ Delete</li>
           <li>📝 Question bank</li>
         </ul>
+
+        {/* Buscador dentro del panel central */}
         <div className="search-box mt-3">
           <input
             type="text"
             placeholder="Buscar en cursos..."
             className="form-control"
+            // TODO: onChange + estado para búsqueda de cursos
           />
         </div>
       </div>
 
-      {/* Área de contenido principal */}
+      {/* Área de contenido principal (placeholder) */}
       <div
         className="content"
         style={{
@@ -95,6 +105,7 @@ function AdminPage() {
         }}
       >
         <p>Selecciona una opción de la izquierda para administrar tu curso.</p>
+        {/* TODO: Aquí puedes renderizar contenido según la opción seleccionada */}
       </div>
     </div>
   );
